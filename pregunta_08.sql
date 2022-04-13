@@ -40,4 +40,4 @@
 --  3  2019  550.998571
 --
 --  >>> Escriba su codigo a partir de este punto <<<
---
+SELECT avg(c21) FROM tbl2 ORDER BY c23;
