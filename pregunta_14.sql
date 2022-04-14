@@ -42,5 +42,5 @@
 --  4  E  555.323077
 --
 --  >>> Escriba su codigo a partir de este punto <<<
-SELECT avg(c21) FROM tbl2 WHERE c13>400 GROUP BY K0;
+SELECT tbl1.K0, round(AVG(c21),6) FROM tbl1 INNER JOIN tbl2 ON tbl1.K1 = tbl2.K1 WHERE c13>400 GROUP BY (K0);
 
