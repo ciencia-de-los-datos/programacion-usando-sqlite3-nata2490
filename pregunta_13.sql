@@ -42,4 +42,4 @@
 --  4  E  474.825000
 -- 
 --  >>> Escriba su codigo a partir de este punto <<<
-SELECT tbl1.K0, round(AVG(c12),6) FROM tbl1 WHERE c13>400 GROUP BY (K0);
+pd.read_sql((SELECT tbl1.K0, round(avg(c12),6) AS 'avg(c12)' FROM tbl1 WHERE c13>400 GROUP BY (K0)), con=conn);

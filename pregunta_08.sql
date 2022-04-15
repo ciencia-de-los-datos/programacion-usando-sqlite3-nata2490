@@ -40,4 +40,4 @@
 --  3  2019  550.998571
 --
 --  >>> Escriba su codigo a partir de este punto <<<
-SELECT strftime('%Y',c23), round(AVG(c21),6) FROM tbl2 GROUP BY strftime('%Y',c23);
+pd.read_sql((SELECT strftime('%Y',c23) AS 'YEAR', round(AVG(c21),6) AS 'avg(c21)' FROM tbl2 GROUP BY strftime('%Y',c23)), con=conn);
