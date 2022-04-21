@@ -37,4 +37,4 @@
 --  0  2018     6
 --
 --  >>> Escriba su codigo a partir de este punto <<<
-pd.read_sql(SELECT strftime('%Y', c14) AS 'YEAR', COUNT(*) AS 'CANT' FROM tbl1 WHERE c14 LIKE '2018%', con=conn);
+SELECT strftime('%Y', c14), count(*) FROM tbl1 WHERE c14 LIKE '2018%';
